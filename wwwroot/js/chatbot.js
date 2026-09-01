@@ -11,7 +11,7 @@ const AutoBotChat = (() => {
      live ASP.NET Core API to replace mock replies with real
      ones. Expected response shape: { "reply": "..." }
      --------------------------------------------------------- */
-  const USE_BACKEND = false;
+  const USE_BACKEND = true;
   const BACKEND_URL = '/api/chat';
 
   const bots = {
