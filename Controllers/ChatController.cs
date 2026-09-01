@@ -54,7 +54,7 @@ namespace AutoBotAi.Controllers
                 : "You are a helpful business assistant.";
 
             var client = _httpClientFactory.CreateClient();
-            var url = $"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key={apiKey}";
+            var url = $"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key={apiKey}";
 
             var payload = new
             {
