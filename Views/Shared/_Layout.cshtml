@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#F7F2E7" />
+<title>AutoBot AI — Custom AI Chat Assistants for Pakistani Businesses</title>
+<meta name="description" content="Live AI chatbot demos for restaurants, clinics, sports shops and law firms. Book a table, an appointment, or a consultation — right from the chat widget." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+
+<!-- ============ TOP NAV (desktop, and mobile brand bar) ============ -->
+<nav class="topnav">
+  <div class="topnav__inner">
+    <a href="#home" class="brand">
+      <span class="brand__mark">
+        <i data-lucide="bot"></i>
+      </span>
+      <span class="brand__word">AutoBot <span class="text-gradient">AI</span></span>
+    </a>
+    <div class="topnav__links">
+      <a href="#demos" class="nav-link">Demos</a>
+      <a href="#features" class="nav-link">Features</a>
+      <a href="#pricing" class="nav-link">Pricing</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <a href="#pricing" class="btn btn--brand btn--sm topnav__cta">Get Your Bot</a>
+  </div>
+</nav>
+
+<main>
+  @RenderBody()
+</main>
+
+<!-- ============ BOTTOM TAB NAV (mobile only) ============ -->
+<nav class="tabbar" aria-label="Primary">
+  <a href="#home" class="tabbar__item">
+    <i data-lucide="home"></i>
+    <span>Home</span>
+  </a>
+  <a href="#demos" class="tabbar__item">
+    <i data-lucide="layout-grid"></i>
+    <span>Demos</span>
+  </a>
+  <a href="#pricing" class="tabbar__item">
+    <i data-lucide="tag"></i>
+    <span>Pricing</span>
+  </a>
+  <a href="#contact" class="tabbar__item">
+    <i data-lucide="phone"></i>
+    <span>Contact</span>
+  </a>
+</nav>
+
+<!-- ============ FLOATING CHAT TRIGGER ============ -->
+<button id="chatTrigger" class="chat-trigger pulse-ring" onclick="AutoBotChat.toggle()" aria-label="Open chat">
+  <i data-lucide="message-circle" class="chat-trigger__icon-open"></i>
+  <i data-lucide="x" class="chat-trigger__icon-close hidden"></i>
+</button>
+
+<!-- ============ CHAT WINDOW ============ -->
+<div id="chatWindow" class="chat-window closed">
+
+  <div id="chatHeader" class="chat-window__header">
+    <div class="chat-window__who">
+      <span id="chatAvatar" class="chat-window__avatar">
+        <i data-lucide="bot" id="chatAvatarIcon"></i>
+      </span>
+      <div>
+        <p id="chatBotName" class="chat-window__name">AutoBot AI</p>
+        <p class="chat-window__status"><span class="dot dot--online"></span> Online · replies instantly</p>
+      </div>
+    </div>
+    <button onclick="AutoBotChat.toggle()" aria-label="Close chat" class="chat-window__close">
+      <i data-lucide="x"></i>
+    </button>
+  </div>
+
+  <div id="chatBody" class="chat-window__body"></div>
+  <div id="chatChips" class="chat-window__chips"></div>
+
+  <div class="chat-window__inputbar">
+    <input id="chatInput" type="text" placeholder="Type a message…" autocomplete="off" />
+    <button onclick="AutoBotChat.handleSendClick()" aria-label="Send message" class="chat-window__send">
+      <i data-lucide="send"></i>
+    </button>
+  </div>
+  <p class="chat-window__footer">Powered by AutoBot AI</p>
+</div>
+
+<script src="~/js/chatbot.js" asp-append-version="true"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>

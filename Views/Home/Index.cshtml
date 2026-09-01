@@ -1,0 +1,267 @@
+@{
+    ViewData["Title"] = "AutoBot AI";
+}
+
+<!-- ============ HERO ============ -->
+<section id="home" class="hero">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="container hero__inner">
+    <div class="eyebrow">
+      <span class="dot dot--online"></span>
+      4 live demo bots · built for Pakistani restaurants, clinics, sports shops &amp; law firms
+    </div>
+    <h1 class="hero__title">
+      Turn Website Visitors Into
+      <span class="text-gradient">Paying Customers</span>
+      With Custom AI Assistants
+    </h1>
+    <p class="hero__subtitle">
+      Explore interactive AI demos built for local restaurants, medical clinics, sports shops, and law firms.
+    </p>
+    <div class="hero__actions">
+      <a href="#demos" class="btn btn--brand btn--lg">Test Live Demos Below</a>
+      <a href="#pricing" class="btn btn--ghost btn--lg">See Pricing</a>
+    </div>
+    <div class="hero__tags">
+      <span><i data-lucide="utensils"></i> Restaurants</span>
+      <span><i data-lucide="stethoscope"></i> Clinics</span>
+      <span><i data-lucide="dumbbell"></i> Sports Shops</span>
+      <span><i data-lucide="scale"></i> Law Firms</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEMO GRID ============ -->
+<section id="demos" class="section">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow-label">01 — LIVE DEMOS</p>
+      <h2 class="section__title">Pick an industry. Chat with its bot.</h2>
+      <p class="section__sub">Every card below launches the same widget — re-skinned instantly with that business's own theme, logo, and colour palette.</p>
+    </div>
+
+    <div class="demo-grid">
+
+      <!-- Card 1: Restaurant -->
+      <article class="demo-card demo-card--restaurant">
+        <div class="demo-card__top">
+          <span class="bot-logo bot-logo--restaurant">
+            <i data-lucide="utensils"></i>
+          </span>
+          <span class="theme-swatch" aria-hidden="true">
+            <i style="--sw:#D97706"></i><i style="--sw:#F59E0B"></i><i style="--sw:#FCD34D"></i>
+          </span>
+        </div>
+        <h3 class="demo-card__title">Restaurant Booking Assistant</h3>
+        <p class="demo-card__desc">Handles table reservations, answers menu queries, and checks daily specials.</p>
+        <div class="demo-card__chips">
+          <button class="chip" onclick="AutoBotChat.quickLaunch('restaurant','Book a table for 4')">Book a table for 4</button>
+          <button class="chip" onclick="AutoBotChat.quickLaunch('restaurant', &quot;What's today's special?&quot;)">What's today's special?</button>
+          <button class="chip" onclick="AutoBotChat.quickLaunch('restaurant','Halal certified menu?')">Halal certified menu?</button>
+        </div>
+        <button class="btn btn--block demo-card__launch" onclick="AutoBotChat.switchBot('restaurant'); AutoBotChat.open();">Launch Restaurant Bot</button>
+      </article>
+
+      <!-- Card 2: Clinic -->
+      <article class="demo-card demo-card--clinic">
+        <div class="demo-card__top">
+          <span class="bot-logo bot-logo--clinic">
+            <i data-lucide="stethoscope"></i>
+          </span>
+          <span class="theme-swatch" aria-hidden="true">
+            <i style="--sw:#059669"></i><i style="--sw:#0D9488"></i><i style="--sw:#34D399"></i>
+          </span>
+        </div>
+        <h3 class="demo-card__title">CarePoint Medical Receptionist</h3>
+        <p class="demo-card__desc">Handles consultation appointments, doctor availability, and clinic hours.</p>
+        <div class="demo-card__chips">
+          <button class="chip" onclick="AutoBotChat.quickLaunch('clinic','Book general checkup')">Book general checkup</button>
+          <button class="chip" onclick="AutoBotChat.quickLaunch('clinic','Clinic timing?')">Clinic timing?</button>
+          <button class="chip" onclick="AutoBotChat.quickLaunch('clinic','Do you take insurance?')">Do you take insurance?</button>
+        </div>
+        <button class="btn btn--block demo-card__launch" onclick="AutoBotChat.switchBot('clinic'); AutoBotChat.open();">Launch Clinic Bot</button>
+      </article>
+
+      <!-- Card 3: Sports -->
+      <article class="demo-card demo-card--sports">
+        <div class="demo-card__top">
+          <span class="bot-logo bot-logo--sports">
+            <i data-lucide="dumbbell"></i>
+          </span>
+          <span class="theme-swatch" aria-hidden="true">
+            <i style="--sw:#2563EB"></i><i style="--sw:#0284C7"></i><i style="--sw:#38BDF8"></i>
+          </span>
+        </div>
+        <h3 class="demo-card__title">Apex Athletics Gear Advisor</h3>
+        <p class="demo-card__desc">Recommends workout gear, helps with size selection, and checks stock.</p>
+        <div class="demo-card__chips">
+          <button class="chip" onclick="AutoBotChat.quickLaunch('sports','Best running shoes?')">Best running shoes?</button>
+          <button class="chip" onclick="AutoBotChat.quickLaunch('sports','Size chart for gloves')">Size chart for gloves</button>
+          <button class="chip" onclick="AutoBotChat.quickLaunch('sports','Return policy?')">Return policy?</button>
+        </div>
+        <button class="btn btn--block demo-card__launch" onclick="AutoBotChat.switchBot('sports'); AutoBotChat.open();">Launch Sports Bot</button>
+      </article>
+
+      <!-- Card 4: Legal -->
+      <article class="demo-card demo-card--legal">
+        <div class="demo-card__top">
+          <span class="bot-logo bot-logo--legal">
+            <i data-lucide="scale"></i>
+          </span>
+          <span class="theme-swatch" aria-hidden="true">
+            <i style="--sw:#4F46E5"></i><i style="--sw:#7C3AED"></i><i style="--sw:#A78BFA"></i>
+          </span>
+        </div>
+        <h3 class="demo-card__title">Vanguard Legal Screening Bot</h3>
+        <p class="demo-card__desc">Screens intake details, collects case descriptions, and schedules consultations.</p>
+        <div class="demo-card__chips">
+          <button class="chip" onclick="AutoBotChat.quickLaunch('legal','Book legal consultation')">Book legal consultation</button>
+          <button class="chip" onclick="AutoBotChat.quickLaunch('legal','What are your fees?')">What are your fees?</button>
+          <button class="chip" onclick="AutoBotChat.quickLaunch('legal','Practice areas?')">Practice areas?</button>
+        </div>
+        <button class="btn btn--block demo-card__launch" onclick="AutoBotChat.switchBot('legal'); AutoBotChat.open();">Launch Legal Bot</button>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section id="features" class="section">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow-label">02 — FEATURES</p>
+      <h2 class="section__title">One bot. Every job your front desk does.</h2>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <span class="feature-card__icon feature-card__icon--violet"><i data-lucide="clock"></i></span>
+        <h3>Replies 24/7</h3>
+        <p>Your bot answers at 2am on a Sunday exactly the way it answers at noon on a Tuesday.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-card__icon feature-card__icon--cyan"><i data-lucide="calendar-check"></i></span>
+        <h3>Books real appointments</h3>
+        <p>Table reservations, checkups, consultations — captured straight into your system, no phone tag.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-card__icon feature-card__icon--emerald"><i data-lucide="palette"></i></span>
+        <h3>Wears your brand</h3>
+        <p>Colours, tone, and logo matched to your business — like the four themed demos above.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-card__icon feature-card__icon--amber"><i data-lucide="bell-ring"></i></span>
+        <h3>Alerts you on new leads</h3>
+        <p>Every booking or serious enquiry lands in your inbox or WhatsApp the moment it happens.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-card__icon feature-card__icon--blue"><i data-lucide="message-square"></i></span>
+        <h3>Works on WhatsApp too</h3>
+        <p>Same assistant, same memory of your business, wherever your customers already are.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-card__icon feature-card__icon--rose"><i data-lucide="rocket"></i></span>
+        <h3>Live on your site in days</h3>
+        <p>One script tag. No app to install, no team training required.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section id="pricing" class="section">
+  <div class="container container--narrow">
+    <div class="section__head">
+      <p class="eyebrow-label">03 — PRICING</p>
+      <h2 class="section__title">Simple setup, one-time cost</h2>
+      <p class="section__sub">Pick a starting point — every plan can grow with your business.</p>
+    </div>
+
+    <div class="price-grid">
+      <div class="price-card">
+        <h3>Starter Bot</h3>
+        <p class="price-card__tag">For businesses that just need fast, accurate answers.</p>
+        <div class="price-card__amount">PKR 15,000<span>setup</span></div>
+        <ul class="price-card__list">
+          <li><i data-lucide="check"></i> Custom FAQ bot</li>
+          <li><i data-lucide="check"></i> Website script embed</li>
+          <li><i data-lucide="check"></i> Standard branding</li>
+        </ul>
+        <a href="#contact" class="btn btn--ghost btn--block">Get Started</a>
+      </div>
+
+      <div class="price-card price-card--featured">
+        <span class="price-card__badge">MOST POPULAR</span>
+        <h3>Pro Business</h3>
+        <p class="price-card__tag">For businesses that take real bookings, not just questions.</p>
+        <div class="price-card__amount price-card__amount--brand">PKR 25,000<span>setup</span></div>
+        <ul class="price-card__list">
+          <li><i data-lucide="check"></i> Table / appointment reservation function calling</li>
+          <li><i data-lucide="check"></i> Database storage</li>
+          <li><i data-lucide="check"></i> Custom branding</li>
+          <li><i data-lucide="check"></i> Lead alerts</li>
+        </ul>
+        <a href="#contact" class="btn btn--brand btn--block">Get Started</a>
+      </div>
+
+      <div class="price-card">
+        <h3>Custom Enterprise</h3>
+        <p class="price-card__tag">For multi-location or multi-channel operations.</p>
+        <div class="price-card__amount">Custom Quote</div>
+        <ul class="price-card__list">
+          <li><i data-lucide="check"></i> Multi-platform integration (WhatsApp Business + Web)</li>
+          <li><i data-lucide="check"></i> Custom database sync</li>
+        </ul>
+        <a href="#contact" class="btn btn--ghost btn--block">Talk to Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT / FOOTER ============ -->
+<footer id="contact" class="footer">
+  <div class="container footer__grid">
+
+    <div>
+      <p class="eyebrow-label">04 — CONTACT</p>
+      <h2 class="section__title footer__title">Ready to stop missing customers after hours?</h2>
+      <p class="footer__lede">Tell us about your business and we'll get back to you with a bot plan that fits — usually within a day.</p>
+
+      <form class="contact-form" onsubmit="AutoBotSite.handleContactSubmit(event)">
+        <div class="contact-form__row">
+          <input id="contactName" required type="text" placeholder="Your name" />
+          <input id="contactBusiness" required type="text" placeholder="Business name" />
+        </div>
+        <input id="contactEmail" required type="text" placeholder="Email or phone" />
+        <textarea id="contactMessage" required rows="3" placeholder="What do you need your bot to do?"></textarea>
+        <button type="submit" class="btn btn--brand">Send message</button>
+        <p id="formConfirm" class="contact-form__confirm hidden"></p>
+      </form>
+    </div>
+
+    <div class="footer__side">
+      <div class="glass-panel contact-panel">
+        <h3>Prefer to just chat?</h3>
+        <a href="https://wa.me/923355129688?text=Hi%20AutoBot%20AI%2C%20I%27d%20like%20to%20set%20up%20a%20chatbot%20for%20my%20business"
+           target="_blank" rel="noopener" class="whatsapp-cta">
+          <span class="whatsapp-cta__left">
+            <span class="whatsapp-cta__icon"><i data-lucide="phone"></i></span>
+            <span>
+              <span class="whatsapp-cta__title">Message us on WhatsApp</span>
+              <span class="whatsapp-cta__sub">Usually replies in minutes</span>
+            </span>
+          </span>
+          <i data-lucide="arrow-up-right"></i>
+        </a>
+        <a href="mailto:hello@autobot.ai" class="contact-line"><i data-lucide="mail"></i> hello@autobot.ai</a>
+        <span class="contact-line"><i data-lucide="map-pin"></i> Lahore, Pakistan — remote-friendly</span>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© 2026 AutoBot AI. All rights reserved.</span>
+        <span><span class="dot dot--online"></span> All 4 demo bots online</span>
+      </div>
+    </div>
+
+  </div>
+</footer>
