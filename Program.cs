@@ -1,5 +1,15 @@
 var builder = WebApplication.CreateBuilder(args);
 
+// Disable JSON config file-watching (inotify) — unnecessary in production
+// and can exhaust the low inotify-instance limit inside Render's containers,
+// crashing the app on startup/restart.
+builder.Configuration.Sources.Clear();
+builder.Configuration
+    .AddJsonFile("appsettings.json", optional: true, reloadOnChange: false)
+    .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true, reloadOnChange: false)
+    .AddEnvironmentVariables()
+    .AddCommandLine(args);
+
 builder.Services.AddControllersWithViews();
 builder.Services.AddHttpClient();
 
@@ -11,7 +21,6 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
